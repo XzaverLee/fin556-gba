@@ -1,0 +1,30 @@
+{
+    "name": "fin556-gba",
+    "dockerComposeFile": [
+        "docker-compose.yml"
+    ],
+    "service": "fin556-gba",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.debugpy",
+                "charliermarsh.ruff",
+                "ms-vscode.js-debug",
+                "esbenp.prettier-vscode",
+                "JuanBlanco.solidity",
+                "xabikos.JavaScriptSnippets",
+                "dbaeumer.vscode-eslint"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2.12.4": {
+            "version": "latest",
+            "moby": true
+        }
+    },
+    "remoteUser": "vscode",
+    "postStartCommand": "/bin/bash .devcontainer/postStartCommand.sh"
+}
