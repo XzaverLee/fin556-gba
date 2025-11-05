@@ -12,7 +12,7 @@ describe("Crowdsale", function () {
 
         // Deploy Token contract
         const Token = await ethers.getContractFactory(
-            "XZToken"
+            "XZToken2"
         );
         token = await Token.deploy(1000, owner.address);
         await token.waitForDeployment();

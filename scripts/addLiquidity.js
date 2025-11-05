@@ -13,7 +13,7 @@ async function main() {
 
     // Get Tokens
     const tokenA = await ethers.getContractAt(
-        "XZToken",
+        "XZToken2",
         addresses.token0
     );
     // const tokenB = addresses.weth9;
@@ -33,8 +33,8 @@ async function main() {
     console.log("Pair address:", pairAddress);
 
     // Approve Tokens
-    const amountA = ethers.parseUnits("100", "ether");
-    const amountB = ethers.parseUnits("0.1", "ether");
+    const amountA = ethers.parseUnits("200", "ether");
+    const amountB = ethers.parseUnits("0.2", "ether");
     let tx = await tokenA.approve(addresses.router, amountA);
     await tx.wait();
     await tokenB.deposit({

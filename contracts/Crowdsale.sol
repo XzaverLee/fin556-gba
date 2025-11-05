@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.20;
 
-import "./XZToken.sol";
+import "./XZToken2.sol";
 
 contract Crowdsale {
-    XZToken public token;
+    XZToken2 public token;
     uint256 public rate;
     event TokensPurchased(address buyer, uint256 amount);
 
     constructor(address tokenAddress, uint256 rate_) {
         rate = rate_;
-        token = XZToken(tokenAddress);
+        token = XZToken2(tokenAddress);
     }
 
     function buyTokens() public payable {

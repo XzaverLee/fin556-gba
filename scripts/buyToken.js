@@ -34,13 +34,13 @@ async function main() {
     // Check balance
     const tokenAddr = await crowdsale.token();
     const token = await ethers.getContractAt(
-        "XZToken",
+        "XZToken2",
         tokenAddr
     );
     const balance = await token.balanceOf(signer.getAddress());
     console.log(`Token address: ${tokenAddr}`);
     console.log(
-        `Tokens purchased: ${ethers.formatUnits(balance, 18)} XLZD`
+        `Tokens purchased: ${ethers.formatUnits(balance, 18)} XLZD2`
     );
 }
 

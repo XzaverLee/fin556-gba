@@ -22,7 +22,7 @@ async function main() {
 
     // Transfer token ownership to the Crowdsale contract
     const Token = await ethers.getContractAt(
-        "XZToken",
+        "XZToken2",
         TokenAddress
     );
     const transferTx = await Token.transferOwnership(crowdsaleAddress);

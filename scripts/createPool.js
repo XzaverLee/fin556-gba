@@ -23,10 +23,9 @@ async function getPairAddress(token0, token1) {
 
 async function main() {
     const [signer] = await ethers.getSigners();
-    console.log(await signer.getAddress());
 
     // Create Pair
-    token0 = await ethers.getContractAt("XZToken", addresses.token0);
+    token0 = await ethers.getContractAt("XZToken2", addresses.token0);
     token1 = addresses.weth9
     factory = new ethers.Contract(addresses.factory, UniswapV2Factory.abi, signer)
 

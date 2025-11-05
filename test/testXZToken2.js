@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe("XZToken", function () {
+describe("XZToken2", function () {
     let token;
     let owner;
     let addr1;
@@ -9,7 +9,7 @@ describe("XZToken", function () {
 
     beforeEach(async function () {
         [owner, addr1, addr2] = await ethers.getSigners();
-        const Token = await ethers.getContractFactory("XZToken");
+        const Token = await ethers.getContractFactory("XZToken2");
         token = await Token.deploy(1000, owner.address);
     });
 

@@ -6,7 +6,7 @@ async function main() {
 
     // Deploy the XZToken contract
     const factory = await ethers.getContractFactory(
-        "XZToken"
+        "XZToken2"
     );
     const Token = await factory.deploy(
         ethers.parseUnits("1", "ether"),
@@ -14,7 +14,7 @@ async function main() {
     );
     await Token.waitForDeployment();
     TokenAddress = await Token.getAddress();
-    console.log(`XZToken deployed to: ${TokenAddress}`);
+    console.log(`XZToken2 deployed to: ${TokenAddress}`);
 
     // Check gas usage
     const deploymentTx = Token.deploymentTransaction();
