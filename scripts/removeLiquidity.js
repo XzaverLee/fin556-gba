@@ -1,8 +1,6 @@
 const addresses = require("./addresses.json");
 const UniswapV2Factory = require("@uniswap/v2-core/build/UniswapV2Factory.json");
 const WETH9 = require("@uniswap/v2-periphery/build/WETH9.json");
-const UniswapV2Router02 = require("@uniswap/v2-periphery/build/UniswapV2Router02.json");
-const UniswapV2Pair = require("@uniswap/v2-core/build/UniswapV2Pair.json");
 const { ethers } = require("hardhat");
 
 
